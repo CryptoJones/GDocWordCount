@@ -75,8 +75,19 @@ GDocWordCount/
 │   ├── options.html
 │   ├── options.css
 │   └── options.js
+├── PRIVACY.md          # Privacy Policy
 └── README.md           # Documentation & installation instructions
 ```
+
+---
+
+## Privacy & Security
+
+This extension is 100% private, local, and open-source:
+- **No Document Reading:** It does not read, inspect, or copy your document contents.
+- **No Analytics or Telemetry:** Zero tracking scripts, ads, or cookies.
+- **No Remote Network Requests:** Runs strictly inside your browser session.
+- See our full [Privacy Policy](PRIVACY.md).
 
 ---
 
