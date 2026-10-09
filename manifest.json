@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Google Docs Always Word Count",
   "version": "1.0.0",
+  "author": "Aaron Kingsley Clark <aaron.kingsley.clark@gmail.com>",
   "description": "Automatically enables the live word count view on every Google Doc so you always see your word count while typing.",
   "icons": {
     "16": "icons/icon16.png",
