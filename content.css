@@ -1,0 +1,64 @@
+/**
+ * Google Docs Always Word Count - Content Styles
+ */
+
+/* Stealth mode: prevent visual flicker of the Tools menu and Word count modal dialog during auto-enable */
+html.gdoc-wc-automating .modal-dialog,
+html.gdoc-wc-automating .modal-dialog-bg,
+html.gdoc-wc-automating .docs-material-dialog,
+html.gdoc-wc-automating div[role="dialog"],
+html.gdoc-wc-automating .goog-menu,
+html.gdoc-wc-automating div[role="menu"] {
+  opacity: 0.001 !important;
+  pointer-events: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Subtle toast notification when word count is auto-enabled (optional) */
+.gdoc-wc-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #202124;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.gdoc-wc-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gdoc-wc-toast-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #34a853;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gdoc-wc-toast-icon::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Docs Always Word Count</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-group">
+      <img src="../icons/icon32.png" alt="Logo" class="logo">
+      <div class="title-group">
+        <h1 class="title">Always Word Count</h1>
+        <span class="subtitle">for Google Docs</span>
+      </div>
+    </div>
+    <span class="version-tag">v1.0</span>
+  </header>
+
+  <main class="content">
+    <!-- Current Document Status Section -->
+    <div id="doc-status-card" class="card status-card">
+      <div class="status-header">
+        <span class="status-indicator-dot" id="status-dot"></span>
+        <span class="status-title" id="status-title">Checking tab...</span>
+      </div>
+      <p class="status-desc" id="status-desc">Analyzing Google Docs status...</p>
+      <button id="btn-trigger" class="btn btn-primary" style="display: none;">
+        <span class="btn-icon">⚡</span>
+        <span id="btn-trigger-text">Enable Word Count Now</span>
+      </button>
+      <button id="btn-open-doc" class="btn btn-outline" style="display: none;">
+        <span>Open New Google Doc (docs.new)</span>
+      </button>
+    </div>
+
+    <!-- Global Preferences Section -->
+    <div class="card settings-card">
+      <h2 class="card-title">Settings</h2>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <label class="setting-label" for="toggle-auto">Auto-enable Word Count</label>
+          <span class="setting-hint">Automatically turn on for every document you open</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-auto" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <label class="setting-label" for="toggle-stealth">Stealth Activation</label>
+          <span class="setting-hint">Silently activates without dialog flicker</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-stealth" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <label class="setting-label" for="toggle-toast">Show Notification</label>
+          <span class="setting-hint">Display brief confirmation message when turned on</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-toast">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="#" id="link-options" class="footer-link">Advanced Options</a>
+    <span class="bullet">•</span>
+    <span class="footer-note">100% Local & Private</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

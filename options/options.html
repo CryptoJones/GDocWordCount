@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Docs Always Word Count - Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <img src="../icons/icon48.png" alt="Logo" class="header-logo">
+      <div class="header-titles">
+        <h1>Google Docs Always Word Count</h1>
+        <p class="subtitle">Settings & Documentation</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- Preferences Section -->
+      <section class="card">
+        <h2>General Preferences</h2>
+
+        <div class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="opt-auto-enable" checked>
+            <span class="checkbox-checkmark"></span>
+            <div class="checkbox-text">
+              <span class="label-title">Auto-enable on every document</span>
+              <span class="label-desc">Automatically turns on the word count view whenever any Google Doc opens (recommended).</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="opt-stealth-mode" checked>
+            <span class="checkbox-checkmark"></span>
+            <div class="checkbox-text">
+              <span class="label-title">Stealth Mode</span>
+              <span class="label-desc">Silently turns on the word count in the background without showing the dialog box or menu animation.</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="opt-notifications">
+            <span class="checkbox-checkmark"></span>
+            <div class="checkbox-text">
+              <span class="label-title">Show Notification</span>
+              <span class="label-desc">Display a small confirmation toast in the bottom-right corner when the word count is enabled.</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="save-status" id="save-status">Settings saved automatically.</div>
+      </section>
+
+      <!-- How it Works & FAQ Section -->
+      <section class="card">
+        <h2>How It Works</h2>
+        <div class="faq-item">
+          <h3>Why is this extension needed?</h3>
+          <p>
+            Google Docs only saves the "Display word count while typing" setting on a per-document basis.
+            Whenever you create a new document (e.g. via <code>docs.new</code>) or open documents created by others,
+            the word count is turned off by default. Google provides no account-level global switch for this.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How does this extension turn it on?</h3>
+          <p>
+            When you open a Google Doc, the extension checks if the native word count pill is already visible.
+            If not, it automatically and silently activates the native setting via Google Docs' built-in Word Count tool.
+            Because it uses Google Docs' native feature, the word count is 100% accurate, tracks text as you type,
+            and allows you to click the counter to switch between words, pages, and characters.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does this extension track or collect any data?</h3>
+          <p>
+            <strong>No.</strong> The extension runs 100% locally inside your browser. No analytics, no remote servers,
+            no data collection. It only interacts with the Google Docs interface to toggle your preferred display setting.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Keyboard Shortcut</h3>
+          <p>
+            You can also manually open the native Google Docs Word Count box at any time by pressing
+            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> (Windows/Linux/ChromeOS) or
+            <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> (Mac).
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Google Docs Always Word Count Extension • Version 1.0.0</p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
